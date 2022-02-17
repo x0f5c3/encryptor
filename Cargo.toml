@@ -1,0 +1,33 @@
+[package]
+name = "encryptor"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.53"
+
+[dependencies.totp-rs]
+version = "0.7.4"
+features = ["qr", "serde_support"]
+
+[dependencies.rsa]
+version = "0.5.0"
+features = ["serde", "pkcs5"]
+
+[dependencies.chacha20poly1305]
+version = "0.9.0"
+features = ["std"]
+
+[dependencies.argon2]
+version = "0.3.3"
+features = ["parallel"]
+
+[dependencies.paris]
+version = "1.5.9"
+features = ["macros"]
+
+[dependencies.clap]
+version = "3.1.0"
+features = ["derive"]
